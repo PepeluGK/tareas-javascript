@@ -1,6 +1,5 @@
 const readline = require("readline-sync");
 
-// Clase de movimientos (Move)
 class Move {
     constructor(nombre, dmg) {
         this.nombre = nombre;
@@ -8,12 +7,12 @@ class Move {
     }
 
     calcularDano(atk, dfs) {
-        const randomFactor = Math.random() * 0.15 + 0.85; // Factor aleatorio entre 0.85 y 1.0
+        const randomFactor = Math.random() * 0.15 + 0.85;
         return Math.max(1, Math.floor((atk / dfs) * this.dmg * randomFactor));
     }
 }
 
-// Clase de Pokémon
+
 class Pokemon {
     constructor(nombre, hp_actual, hp_max, atk, dfs, moves) {
         this.nombre = nombre;
@@ -50,7 +49,7 @@ class Pokemon {
     }
 }
 
-// Definición de movimientos
+
 const impactrueno = new Move("Impactrueno", 40);
 const rayo = new Move("Rayo", 90);
 const lanzallamas = new Move("Lanzallamas", 40);
@@ -79,7 +78,6 @@ const patada_salto_alta = new Move("Patada Salto Alta", 100);
 const a_bocajarro = new Move("A Bocajarro", 120);
 const psico_corte = new Move("Psico Corte", 70);
 
-// Crear la lista de Pokémon
 const pokemons = [
     new Pokemon("Pikachu", 55, 55, 55, 40, [impactrueno, rayo]),
     new Pokemon("Charizard", 78, 78, 84, 78, [lanzallamas, vuelo]),
@@ -98,7 +96,7 @@ const pokemons = [
     new Pokemon("Alakazam", 55, 55, 50, 45, [psico_corte, psiquico])
 ];
 
-// Selección aleatoria de Pokémon para el jugador y la IA
+
 function seleccionarPokemonAleatorio() {
     return pokemons[Math.floor(Math.random() * pokemons.length)];
 }
@@ -109,18 +107,15 @@ const pokemonIA = seleccionarPokemonAleatorio();
 console.log(`El jugador ha elegido a ${pokemonJugador.nombre}`);
 console.log(`La IA ha elegido a ${pokemonIA.nombre}\n`);
 
-// Función para mostrar el estado actual del combate
 function mostrarEstado(pokemonJugador, pokemonIA) {
     console.log(`\nEstado actual del combate:`);
     console.log(`${pokemonJugador.nombre} (Jugador) - HP: ${pokemonJugador.hp_actual}/${pokemonJugador.hp_max}`);
     console.log(`${pokemonIA.nombre} (IA) - HP: ${pokemonIA.hp_actual}/${pokemonIA.hp_max}\n`);
 }
 
-// Función principal del combate
 function iniciarCombate(pokemonJugador, pokemonIA) {
     let turnoJugador = true;
 
-    // Mostrar el estado inicial
     mostrarEstado(pokemonJugador, pokemonIA);
 
     while (!pokemonJugador.estaDerrotado() && !pokemonIA.estaDerrotado()) {
@@ -149,7 +144,6 @@ function iniciarCombate(pokemonJugador, pokemonIA) {
             }
         }
 
-        // Mostrar el estado después de cada turno
         mostrarEstado(pokemonJugador, pokemonIA);
 
         turnoJugador = !turnoJugador;
@@ -162,5 +156,4 @@ function iniciarCombate(pokemonJugador, pokemonIA) {
     }
 }
 
-// Iniciar el combate automáticamente
 iniciarCombate(pokemonJugador, pokemonIA);
