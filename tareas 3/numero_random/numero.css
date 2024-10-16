@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  #mensaje.correct {
+    color: green;
+  }
+  
+  #mensaje.high {
+    color: red;
+  }
+  
+  #mensaje.low {
+    color: orange;
+  }
