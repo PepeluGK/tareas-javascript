@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="ahorcado.css">
+</head>
+<body>
+    <div class="juego">
+        <h1>Juego del Ahorcado</h1>
+        <p id="palabra">_ _ _ _ _</p>
+        <p>Introduce una letra:</p>
+        <input type="text" id="letra" maxlength="1">
+        <button onclick="jugar()">Adivinar</button>
+        <p id="mensaje"></p>
+        <p>Intentos restantes: <span id="intentos">6</span></p>
+        <div class="ahorcado">
+            <div class="parte_del_cuerpo" id="cabeza">😣</div>
+            <div class="parte_del_cuerpo" id="cuerpo">👕</div>
+            <div class="parte_del_cuerpo" id="mano_izq">👈</div>
+            <div class="parte_del_cuerpo" id="mano_der">👉</div>
+            <div class="parte_del_cuerpo" id="pierna_izq">🦵</div>
+            <div class="parte_del_cuerpo" id="pierna_der">🦵</div>
+        </div>
+    </div>
+
+    <script src="ahorcado.js"></script>
+</body>
+</html>
