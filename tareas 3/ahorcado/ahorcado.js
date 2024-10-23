@@ -16,6 +16,7 @@ const partesDelCuerpo = [
     document.getElementById("pierna_der")
 ];
 
+
 let letrasAcertadas = Array(palabra_aleatoria.length).fill("_");
 let letrasFalladas = [];
 
