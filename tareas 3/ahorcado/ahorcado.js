@@ -1,6 +1,6 @@
 let palabrasAleatorias = ['ballena', 'violeta', 'uva', 'arbol', 'platano', 'naranja', 'elefante', 'cuaderno', 'manzana', 'reina', 'montana', 'robot', 'cebra'];
 const palabra_aleatoria = palabrasAleatorias[Math.floor(Math.random() * palabrasAleatorias.length)];
-let palabra_escondida = "_ ".repeat(palabra_aleatoria.length).trim();
+let palabra_escondida = "_ ".repeat(palabra_aleatoria.length);
 let intentos = 6;
 const intentosElem = document.getElementById("intentos");
 const mensajeElem = document.getElementById("mensaje");
@@ -15,6 +15,7 @@ const partesDelCuerpo = [
     document.getElementById("pierna_izq"),
     document.getElementById("pierna_der")
 ];
+
 
 let letrasAcertadas = Array(palabra_aleatoria.length).fill("_");
 let letrasFalladas = [];
