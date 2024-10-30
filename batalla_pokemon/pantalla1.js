@@ -167,7 +167,7 @@ pokemons.forEach(pokemon => {
     name.textContent = pokemon.name;
   
     const types = document.createElement("p");
-    
+
   
     pokemon_Grid.appendChild(poke);
 });
