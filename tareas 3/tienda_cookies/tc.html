@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="tc.css">
+</head>
+<body>
+    <h1>Tienda en Línea</h1>
+
+    <section id="productos">
+        <h2>Productos Disponibles</h2>
+        <div class="producto">
+            <img src="img/escudo.jpg" alt="Producto 1">
+            <h3>Escudo de Doran</h3>
+            <p>450 💰</p>
+            <button onclick="agregarAlCarrito('Escudo de Doran')">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/espada.jpg" alt="Producto 2">
+            <h3>Espada de Doran</h3>
+            <p>450 💰</p>
+            <button onclick="agregarAlCarrito('Espada de Doran')">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/anillo.jpg" alt="Producto 3">
+            <h3>Anillo de Doran</h3>
+            <p>400 💰</p>
+            <button onclick="agregarAlCarrito('Anillo de Doran')">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/lagrima.jpg" alt="Producto 4">
+            <h3>Lágrima de la Diosa</h3>
+            <p>400 💰</p>
+            <button onclick="agregarAlCarrito('Lágrima de la Diosa')">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/arcangel.jpg" alt="Producto 5">
+            <h3>Bastón de Arcángel</h3>
+            <p>3000 💰</p>
+            <button onclick="agregarAlCarrito('Bastón de Arcángel')">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/cuchilla.jpg" alt="Producto 6">
+            <h3>Cuchilla negra</h3>
+            <p>3100 💰</p>
+            <button onclick="agregarAlCarrito('Cuchilla negra')">Agregar al Carrito</button>
+        </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <button id="vaciar-carrito">Vaciar Carrito</button>
+    </section>
+
+    <script src="tc.js"></script>
+</body>
+</html>
