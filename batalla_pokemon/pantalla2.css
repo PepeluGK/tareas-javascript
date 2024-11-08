@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('battle_background3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.battle-container {
+    margin-top: 18%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.pokemon {
+    text-align: center;
+    margin: 20px;
+}
+
+.pokemon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0 20px;
+}
+
+#battleButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#battleButton:hover {
+    background-color: grey;
+}
