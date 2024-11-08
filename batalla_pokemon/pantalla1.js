@@ -226,5 +226,8 @@ pokemons.forEach(pokemon => {
 selectButton.addEventListener("click", () => {
     if (selectedPokemon) {
         document.cookie = `selectedPokemon=${JSON.stringify(selectedPokemon)}; path=/;`;
-    } 
+        window.location.href = "pantalla2.html";
+    } else {
+        alert("Por favor, selecciona un Pokémon antes de continuar.");
+    }
 });
