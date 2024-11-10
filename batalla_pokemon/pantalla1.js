@@ -1,5 +1,5 @@
 const pokemons = [
-    { id: 1, name: "Bulbasaur", img: "https://projectpokemon.org/images/normal-sprite/bulbasaur.gif", types: ["Grass", "Poison"], attack: 49, defense: 49, hp: 45 },
+    { id: 1, name: "Bulbasaur", img: "https://projectpokemon.org/images/normal-sprite/bulbasaur.gif", types: ["Grass", "Poison"], attack: 4, defense: 49, hp: 145 },
     { id: 2, name: "Ivysaur", img: "https://projectpokemon.org/images/normal-sprite/ivysaur.gif", types: ["Grass", "Poison"], attack: 62, defense: 63, hp: 60 },
     { id: 3, name: "Venusaur", img: "https://projectpokemon.org/images/normal-sprite/venusaur.gif", types: ["Grass", "Poison"], attack: 82, defense: 83, hp: 80 },
     { id: 4, name: "Charmander", img: "https://projectpokemon.org/images/normal-sprite/charmander.gif", types: ["Fire"], attack: 52, defense: 43, hp: 39 },
@@ -163,7 +163,7 @@ pokemons.forEach(pokemon => {
   
     
 
-    const random_number = Math.floor(Math.random() * 3);
+    const random_number = Math.floor(Math.random() * 10);
     const img = document.createElement("img");
     //Shiny
     if(random_number==1){
@@ -222,7 +222,7 @@ pokemons.forEach(pokemon => {
   
     pokemonGrid.appendChild(card);
 });
-
+//Comprobar
 selectButton.addEventListener("click", () => {
     if (selectedPokemon) {
         document.cookie = `selectedPokemon=${JSON.stringify(selectedPokemon)}; path=/;`;

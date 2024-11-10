@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla 3 - Batalla Pokémon</title>
+    <link rel="stylesheet" href="pantalla3.css">
+</head>
+<body>
+    <div class="battle-container">
+        <div class="pokemon" id="userPokemon">
+            <h3 id="userName"></h3>
+            <img id="userImg" alt="User Pokemon">
+            <div class="health-bar">
+                <div id="userHealthBar" class="health-bar-inner"></div>
+            </div>
+        </div>
+        <h1>VS</h1>
+        <div class="pokemon" id="rivalPokemon">
+            <h3 id="rivalName"></h3>
+            <img id="rivalImg" alt="Rival Pokemon">
+            <div class="health-bar">
+                <div id="rivalHealthBar" class="health-bar-inner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="actions" id="actions">
+        <button id="attackButton">Atacar</button>
+        <button id="healButton">Curar</button>
+    </div>
+    <div id="logs">
+        <div id="log">
+            
+        </div>
+    </div>
+    <script src="pantalla3.js"></script>
+</body>
+</html>

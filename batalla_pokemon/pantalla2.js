@@ -1,5 +1,5 @@
 const pokemons = [
-    { id: 1, name: "Bulbasaur", img: "https://projectpokemon.org/images/normal-sprite/bulbasaur.gif", types: ["Grass", "Poison"], attack: 49, defense: 49, hp: 45 },
+    { id: 1, name: "Bulbasaur", img: "https://projectpokemon.org/images/normal-sprite/bulbasaur.gif", types: ["Grass", "Poison"], attack: 4, defense: 49, hp: 145 },
     { id: 2, name: "Ivysaur", img: "https://projectpokemon.org/images/normal-sprite/ivysaur.gif", types: ["Grass", "Poison"], attack: 62, defense: 63, hp: 60 },
     { id: 3, name: "Venusaur", img: "https://projectpokemon.org/images/normal-sprite/venusaur.gif", types: ["Grass", "Poison"], attack: 82, defense: 83, hp: 80 },
     { id: 4, name: "Charmander", img: "https://projectpokemon.org/images/normal-sprite/charmander.gif", types: ["Fire"], attack: 52, defense: 43, hp: 39 },
@@ -152,6 +152,7 @@ const pokemons = [
     { id: 151, name: "Mew", img: "https://projectpokemon.org/images/normal-sprite/mew.gif", types: ["Psychic"], attack: 100, defense: 100, hp: 100 }
 ];
 
+//Cookies
 function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -162,6 +163,7 @@ const selectedPokemon = JSON.parse(getCookie("selectedPokemon"));
 const userName = document.getElementById("userName");
 const userImg = document.getElementById("userImg");
 
+//comprobacion
 if (selectedPokemon) {
     userName.textContent = selectedPokemon.name;
     userImg.src = selectedPokemon.img;
@@ -169,6 +171,7 @@ if (selectedPokemon) {
     userName.textContent = "No Pokémon seleccionado";
 }
 
+//pokemon rival aleatorio
 function getRandomPokemon() {
     const randomIndex = Math.floor(Math.random() * pokemons.length);
     return pokemons[randomIndex];
